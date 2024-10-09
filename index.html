@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GESTION DES REGIMES DOUANIERES</title>
+</head>
+<body>
+    <div class="container">
+        <h1>INSEREZ DANS LE CHAMP BLEU LES CODES DE 1000 à 9000</h1>
+        
+        <!-- Section de saisie de code -->
+        <div class="blue-section">
+            <label for="codeRegime">INSERER LE CODE REGIME CHAMP BLEU: </label>
+            <input type="number" id="codeRegime" placeholder="0000" onkeyup="detectEnter(event)" min="9000" max="9000">
+
+        </div>
+
+        <!-- Information de Régime (modifiable) -->
+        <div class="header-section" id="codeDouanier">CODE REGIME DOUANIER IMPORT: -----</div>
+        
+        <div class="yellow-section" id="descriptionRegime">
+            <strong>-----:</strong> -----
+        </div>
+
+        <div class="suspensive" id="consequences">
+            DETAILS SUR LE CODE REGIME ENTREE
+        </div>
+
+        <!-- Information additionnelle (statut, bureau, etc.) -->
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>Conséquences Financières</h3>
+                <p id="consequencesFin">-----</p>
+            </div>
+            <div class="info-item">
+                <h3>Statut du Régime</h3>
+                <p id="statutRegime">----</p>
+            </div>
+            <div class="info-item">
+                <h3>Bureau d'Entrée/Sortie</h3>
+                <p id="bureauSortie">---</p>
+            </div>
+            <div class="info-item">
+                <h3>Régime</h3>
+                <p id="regimeCode">----</p>
+            </div>
+        </div>
+
+        <!-- Tableau dynamique des variantes -->
+        <div class="highlight">
+            VARIANTES DU REGIME AVEC CODE ADDITIONNELS
+        </div>
+
+        <table id="variantesTable">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Autres variantes par défaut -->
+            </tbody>
+        </table>
+
+        <div class="footer">
+            &copy; 2024 - Gestion des Régimes Douaniers
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
