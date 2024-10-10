@@ -51,7 +51,7 @@ const regimes = {
         description: "Transit National ou international /  Produit traversant le territoire douanier pour l'nterland  en suspension des droits et taxes",
         consequences: "DETAILS ET CONSEQUENCE SUR LE CODE REGIME ENTREE",
         consequencesFin: "SUSPENSIFS DES DROITS ET TAXES IMPORT",
-        statut: "REGIME ECONOMIE IMPORT",
+        statut: "REGIME ECONOMIQUE IMPORT",
         bureau: "CIAB 4",
         regimeCode: "IM8000 TRANSIT NATIONAL ",
         variantes: [
@@ -71,7 +71,7 @@ const regimes = {
         description: "MISE EN ENTREPOT POUR STOCKAGE / MISE EN ENTREPOT POUR STOCKAGE DE PRODUITS IMPORTES",
         consequences: "DETAILS ET CONSEQUENCE SUR LE CODE REGIME ENTREE",
         consequencesFin: "SUSPENSIF DES DROITS ET TAXES IMPORT ",
-        statut: "REGIME ECONOMIE IMPORT",
+        statut: "REGIME ECONOMIQUE IMPORT",
         bureau: "CIAB 4",
         regimeCode: "IM7000 MISE EN ENTREPOT POUR STOCKAGE",
         variantes: [
@@ -318,6 +318,8 @@ function updateTable() {
         tableBody.innerHTML = '';  // Clear the table body for invalid codes
     }
 }
+
+document.getElementById('codeRegime').addEventListener('input', updateTable);
 
 function detectEnter(event) {
     if (event.key === "Enter") {
